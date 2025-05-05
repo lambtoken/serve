@@ -42,11 +42,9 @@ int main(void) {
 
     while (420) {
         int client_fd = accept(server_fd, (struct sockaddr*)&serv_address, (socklen_t*)&addrlen);
-
         send(client_fd, hello, strlen(hello), 0);
 
         close(client_fd);
     }
     close(server_fd);
-
 }
